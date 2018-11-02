@@ -10,6 +10,7 @@ public class FirstFrame extends JFrame{
 	private JPasswordField item4;
 	private JButton item5;
 	private JLabel item6;
+	private JButton item7;
 	
 	
 	FirstFrame(){
@@ -23,6 +24,10 @@ public class FirstFrame extends JFrame{
 		add(item3);
 		item4 = new JPasswordField("",10);
 		add(item4);
+		item7 = new JButton("Login");
+		add(item7);
+		item1 = new JLabel("                ");
+		add(item1);
 		item5 = new JButton("Click Here");
 		add(item5);
 		item6 = new JLabel("to register");

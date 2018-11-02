@@ -13,7 +13,7 @@ public class FirstFrame extends JFrame{
 	private JButton item7;
 	
 	
-	FirstFrame(){
+	public FirstFrame(){
 		super("Hotel_Trivago/Login Page");
 		setLayout(new FlowLayout(0,50,5));
 		item1 = new JLabel("Enter Username:");
@@ -36,23 +36,24 @@ public class FirstFrame extends JFrame{
 		theHandler h = new theHandler();
 		item2.addActionListener(h);
 		item4.addActionListener(h);
+		item5.addActionListener(h);
 	}
 	private class theHandler implements ActionListener{
 		public void actionPerformed(ActionEvent e) {
 			String u= "";
 			String p = "";
-			if(e.getSource()==item2)
-				u = String.format("%s", e.getActionCommand());
-			if(e.getSource()==item4)
+			if(e.getSource()==item2) {
+				u = String.format("%s", e.getActionCommand());				
+			}
+			if(e.getSource()==item4) {
 				p = String.format("%s", e.getActionCommand());
+			}
 			if(e.getSource() == item5) {
 				SecondFrame f = new SecondFrame();
 				f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 				f.setSize(350,400);
 				f.setVisible(true);	
 			}
-			JOptionPane.showMessageDialog(null , u);
-
 		}
 	}
 
